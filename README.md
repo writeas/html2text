@@ -18,6 +18,13 @@ There are still lots of improvements to be had, but FWIW this has worked fine fo
 
 It requires go 1.x or newer ;)
 
+## Changes
+
+This fork is actively used by [Write.as](https://write.as), and contains the following changes from upstream:
+
+* Go module support, with versioning
+* Add `TightLinks` option (removes spaces inside parenthesized URLs)
+* Add `NoStrongs` option (ignores `<b>` and `<strong>` tags)
 
 ## Download the package
 
