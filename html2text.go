@@ -18,6 +18,7 @@ type Options struct {
 	PrettyTables        bool                 // Turns on pretty ASCII rendering for table elements.
 	PrettyTablesOptions *PrettyTablesOptions // Configures pretty ASCII rendering for table elements.
 	OmitLinks           bool                 // Turns on omitting links
+	TightLinks          bool                 // Removes whitespace around links
 }
 
 // PrettyTablesOptions overrides tablewriter behaviors
@@ -255,7 +256,11 @@ func (ctx *textifyTraverseContext) handleElement(node *html.Node) error {
 			attrVal = ctx.normalizeHrefLink(attrVal)
 			// Don't print link href if it matches link element content or if the link is empty.
 			if !ctx.options.OmitLinks && attrVal != "" && linkText != attrVal {
-				hrefLink = "( " + attrVal + " )"
+				if ctx.options.TightLinks {
+					hrefLink = "(" + attrVal + ")"
+				} else {
+					hrefLink = "( " + attrVal + " )"
+				}
 			}
 		}
 
