@@ -1,8 +1,7 @@
 # html2text
 
-[![Documentation](https://godoc.org/github.com/jaytaylor/html2text?status.svg)](https://godoc.org/github.com/jaytaylor/html2text)
-[![Build Status](https://travis-ci.org/jaytaylor/html2text.svg?branch=master)](https://travis-ci.org/jaytaylor/html2text)
-[![Report Card](https://goreportcard.com/badge/github.com/jaytaylor/html2text)](https://goreportcard.com/report/github.com/jaytaylor/html2text)
+[![Documentation](https://godoc.org/github.com/writeas/html2text?status.svg)](https://godoc.org/github.com/writeas/html2text)
+[![Report Card](https://goreportcard.com/badge/github.com/writeas/html2text)](https://goreportcard.com/report/github.com/writeas/html2text)
 
 ### Converts HTML into text of the markdown-flavored variety
 
@@ -23,7 +22,7 @@ It requires go 1.x or newer ;)
 ## Download the package
 
 ```bash
-go get jaytaylor.com/html2text
+go get github.com/writeas/html2text
 ```
 
 ## Example usage
@@ -34,7 +33,7 @@ package main
 import (
 	"fmt"
 
-	"jaytaylor.com/html2text"
+	"github.com/writeas/html2text"
 )
 
 func main() {

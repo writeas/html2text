@@ -1,4 +1,4 @@
-module github.com/jaytaylor/html2text
+module github.com/writeas/html2text
 
 go 1.14
 
