@@ -20,6 +20,7 @@ type Options struct {
 	OmitLinks           bool                 // Turns on omitting links
 	NoStrongs           bool                 // Ignores <b> and <strong> tags
 	TightLinks          bool                 // Removes whitespace around links
+	RemoveH1            bool                 // Removes <h1> tags
 }
 
 // PrettyTablesOptions overrides tablewriter behaviors
@@ -156,6 +157,10 @@ func (ctx *textifyTraverseContext) handleElement(node *html.Node) error {
 		subCtx := textifyTraverseContext{}
 		if err := subCtx.traverseChildren(node); err != nil {
 			return err
+		}
+
+		if node.DataAtom == atom.H1 && ctx.options.RemoveH1 {
+			return nil
 		}
 
 		str := subCtx.buf.String()

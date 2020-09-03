@@ -25,6 +25,7 @@ This fork is actively used by [Write.as](https://write.as), and contains the fol
 * Go module support, with versioning
 * Add `TightLinks` option (removes spaces inside parenthesized URLs)
 * Add `NoStrongs` option (ignores `<b>` and `<strong>` tags)
+* Add `RemoveH1` option (removes `<h1>` tags and contents)
 
 ## Download the package
 
